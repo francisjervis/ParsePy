@@ -21,7 +21,7 @@ from parse_rest import core
 
 import os
 
-API_ROOT = os.environ.get('PARSE_API_ROOT') or 'https://api.parse.com/1'
+API_ROOT = os.environ.get('PARSE_API_ROOT') or 'http://db.timesfree.co/parse'
 
 ACCESS_KEYS = {}
 
