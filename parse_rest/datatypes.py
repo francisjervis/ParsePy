@@ -439,7 +439,10 @@ class ParseResource(ParseBase):
 
     def _init_attrs(self, args):
         for key, value in six.iteritems(args):
-            setattr(self, key, ParseType.convert_from_parse(key, value))
+            try:
+ +                setattr(self, key, ParseType.convert_from_parse(key, value))
+ +            except AttributeError:
+ +                continue
 
     def _to_native(self):
         return ParseType.convert_to_parse(self)
